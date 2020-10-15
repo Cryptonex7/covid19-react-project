@@ -26,10 +26,6 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
-// TODO: Add District-wise data
-// TODO: Background change
-// TODO:
-
 ReactDOM.render(
   <Provider store={store}>
     <PersistGate loading={<div>Loading</div>} persistor={persistor}>
@@ -43,4 +39,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-serviceWorker.unregister();
+serviceWorker.register();
